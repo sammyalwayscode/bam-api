@@ -1,8 +1,8 @@
 //importing modules
-
 import express, { Application, Response, Request } from "express";
 import { dbConfig } from "./config/database";
 import newsRouter from "./router/newsRouter";
+import cors from "cors";
 
 //creaing my port
 const port: number = 2099;
@@ -11,6 +11,7 @@ const port: number = 2099;
 const app: Application = express();
 
 //middleware
+app.use(cors({ origin: "*" }));
 app.use(express.json());
 
 //linking my database to my server
