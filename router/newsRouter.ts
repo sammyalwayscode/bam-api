@@ -6,6 +6,7 @@ import {
   removeNews,
   // updateNews,
 } from "../controller/newsController";
+import { avatarUpload } from "../config/multer";
 
 const newsRouter = Router(); //single get
 newsRouter.get("/news/:newsID", getOneNews);
@@ -13,7 +14,7 @@ newsRouter.get("/news/:newsID", getOneNews);
 newsRouter.route("/allnewsfeed").get(getAllNews);
 
 //create
-newsRouter.post("/createNewsFeed", createNews);
+newsRouter.post("/createNewsFeed", avatarUpload, createNews);
 //update
 // bookRouter.route("/updatenews/:newsId").patch(updateNews);
 //deletecre

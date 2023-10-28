@@ -7,8 +7,6 @@ const newsSchema = new mongoose.Schema<iNews>(
   {
     title: {
       type: String,
-      unique: true,
-      required: [true, "please enter a title"],
     },
     reporterName: {
       type: String,
