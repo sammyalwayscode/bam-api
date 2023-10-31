@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.dbConfig = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 const DB_URL = "mongodb://0.0.0.0:27017/newsFeedDatabase";
-const atlasURI = "mongodb+srv://Sammy:Sammy@cluster0.aqlrqqw.mongodb.net/allStar?retryWrites=true&w=majority";
+const atlasURI = "mongodb+srv://Sammy:eUi7jmVaEcXSpd61@cluster0.aqlrqqw.mongodb.net/allStar?retryWrites=true&w=majority";
 const dbConfig = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const dbConnect = yield mongoose_1.default.connect(atlasURI);
